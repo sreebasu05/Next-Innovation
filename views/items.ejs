@@ -1,0 +1,13 @@
+<%- include("partials/header") -%>
+<div class="container-fluid">
+  <h1><%= title %></h1>
+
+  <%items.forEach(function(item){%>
+  <h2><%=item.bookname%> Rs. <%=item.sellp%></h2>
+  <p>
+    Seller Name: <%=item.name%><br />
+    <a href="/items/<%=item.bookname%>">Know More</a> <!-- if the bookname is same -->
+  </p>
+  <%})%>
+
+</div>
