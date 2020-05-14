@@ -1,26 +1,40 @@
 <%- include("partials/header") -%>
-<section id="sellform">
-  <form class="container-fluid" action="/add" method="post">
-    <h3>Fill the details: </h3>
-    <div class="form-group x">
-      <input class="form-control" type="text" name="bookname" placeholder="Bookname">
-      <input class="form-control" type="text" name="sellp" placeholder="Price">
-      <input class="form-control" type="text" name="name" placeholder="OwnerName">
-      <textarea class="form-control" name="bookdetails" rows="5" cols="30">
+<section id="title">
+  <div class="row container-fluid">
+
+
+    <div class="col-lg-6">
+      <h1 class="heading" > Fill in the Details </h1>
+    </div>
+    <div class="col-lg-6">
+
+      <form action="/add" method="post">
+        <div class="form-group ">
+          <div class="label">Book Name</div>
+          <input class="form-control" type="text" name="bookname" placeholder="Da Vinci Code">
+          <div class="label">Selling Price</div>
+          <input class="form-control" type="text" name="sellp" placeholder="Price">
+          <div class="label">Your Name</div>
+          <input class="form-control" type="text" name="name" placeholder="Millie Bobby Brown">
+          <div class="label">BookDetails:</div>
+          <textarea class="form-control" name="bookdetails" rows="5" cols="30">
 Subject:
 Year:
 Condition:
 Edition:
-      </textarea>
-      <textarea class="form-control" name="contact" rows="5" cols="30">
+          </textarea>
+          <div class="label">Your Contact Info</div>
+          <textarea class="form-control" name="contact" rows="5" cols="30">
 Phone No.:
 Email Id:
 Please contact me between (add preferable time) using (add preferable mode).
 
-      </textarea>
-      <button class="btn btn-dark" type="submit" name="button">Add</button>
+            </textarea>
+          <button class="btn btn-dark" type="submit" name="button">Add</button>
+        </div>
+
+      </form>
     </div>
 
-  </form>
 </section>
 <%- include("partials/footer") -%>
