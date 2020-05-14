@@ -1,0 +1,33 @@
+
+<%- include("partials/header") -%>
+
+<body>
+  <section id="sellform" class="container-fluid">
+      <h2>Contact Form</h2>
+      <p>Connect with us by sending your reviews, problems and suggestions.</p>
+
+
+      <form action="/add" method="post">
+      <div class="label">Name</div>
+      <input class="form-control" type="text" placeholder="John">
+
+      <div class="label">E-Mail</div>
+      <input class="form-control" type="text" placeholder="john2020@gmail.com">
+
+
+      <div class="label">Phone No.</div>
+      <input class="form-control" type="text" placeholder="1234567890">
+
+
+
+      <div class="label">Subject</div>
+      <input class="form-control" type="text" >
+
+
+      <div class="label">Message</div>
+      <textarea class="form-control" ></textarea>
+
+      <div class="btn btn-dark">Send</div>
+    </form>
+  </section>
+<%- include("partials/footer") -%>
