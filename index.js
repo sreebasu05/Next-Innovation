@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/booksDB", {
+mongoose.connect("mongodb://localhost:27017/projectDB", {
   useNewUrlParser: true
 });
 
@@ -26,11 +26,26 @@ const booksSchema = new mongoose.Schema({
   bookname: String,
   sellp: Number,
   name: String,
-  bookd: String,
-  contact: String
+  subject: String,
+  year: String,
+  condition: String,
+  edition: String,
+  phone: String,
+  email: String,
+  time: String
 });
 
 const Book = mongoose.model("Book", booksSchema);
+
+const mailsSchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  phone: Number,
+  subject: String,
+  message: String
+})
+
+const Mail = mongoose.model("Mail", mailsSchema);
 
 app.get("/items", function(req, res) {
   Book.find({}, function(err, foundBooks) {
@@ -55,7 +70,9 @@ app.get("/items", function(req, res) {
   });
 });
 
+
 app.get("/add", function(req, res) {
+
   res.render("additem");
 });
 
@@ -64,8 +81,13 @@ app.post("/add", function(req, res) {
     bookname: req.body.bookname,
     sellp: req.body.sellp,
     name: req.body.name,
-    bookd: req.body.bookdetails,
-    contact: req.body.contact
+    subject: req.body.subject,
+    year: req.body.year,
+    condition: req.body.condition,
+    edition: req.body.edition,
+    phone: req.body.phone,
+    email: req.body.email,
+    time: req.body.time
   });
   book.save();
   res.redirect("/items");
@@ -83,8 +105,13 @@ app.get("/items/:bookid", function(req, res) {
         bookname: foundBook.bookname,
         sellp: foundBook.sellp,
         name: foundBook.name,
-        bookdetails: foundBook.bookd,
-        contact: foundBook.contact
+        subject: foundBook.name,
+        year: foundBook.year,
+        condition: foundBook.condition,
+        edition: foundBook.edition,
+        phone: foundBook.phone,
+        email: foundBook.email,
+        time: foundBook.time
       });
     }
 
@@ -96,6 +123,19 @@ app.get("/info", function(req,res){
 })
 app.get("/contact", function(req,res){
   res.render("contact");
+});
+app.post("/contact", function(req, res) {
+  const mail = new Mail({
+    name: req.body.name,
+    email: req.body.email,
+    phone: req.body.phone,
+    subject: req.body.subject,
+    message: req.body.message
+  });
+  mail.save();
+  res.redirect("/");
+
+
 });
 
 
