@@ -32,7 +32,10 @@ const booksSchema = new mongoose.Schema({
   edition: String,
   phone: String,
   email: String,
-  time: String
+  time: String,
+  hostel: String,
+  room: String
+  
 });
 
 const Book = mongoose.model("Book", booksSchema);
@@ -87,7 +90,9 @@ app.post("/add", function(req, res) {
     edition: req.body.edition,
     phone: req.body.phone,
     email: req.body.email,
-    time: req.body.time
+    time: req.body.time,
+    hostel: req.body.hostel,
+    room: req.body.room
   });
   book.save();
   res.redirect("/items");
@@ -111,7 +116,10 @@ app.get("/items/:bookid", function(req, res) {
         edition: foundBook.edition,
         phone: foundBook.phone,
         email: foundBook.email,
-        time: foundBook.time
+        time: foundBook.time,
+        hostel: foundBook.hostel,
+        room: foundBook.room
+
       });
     }
 

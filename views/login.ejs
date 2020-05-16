@@ -1,0 +1,28 @@
+<%- include("partials/header") -%>
+  <section id="title">
+    <div class="row container-fluid">
+      <div class="col-lg-6 " >
+        <h1 class="heading">Login Page </h1>
+        <p>
+          login or register from here.
+        </p>
+      </div>
+      <div class="col-lg-6 firsthalf">
+        <form action="/login" method="post">
+          <h2 >Log In</h2>
+          <input type="text" name="username" placeholder="Username" /><br /><br />
+          <input type="password" name="password" placeholder="Password" /><br /><br />
+          <button class="btn btn-dark btn-lg" type="submit" name="button">Log In</button>
+          <!-- <a href="cong.html"><input type="button" value="Log In" /></a><br /><br /> -->
+          <div id="container"><br />
+            <a href="re.html" style="margin-right:0px; font-size:13px;
+            font-family:Tahoma,Geneva, sans-serif; padding-top:20px;">Reset password?</a>
+            <a href="for.html" style=" margin-left:30px; font-size:13px;
+            font-family:Tahoma, Geneva,sans-serif;">Forget
+              password</a>
+          </div><br /><br /><br /><br /><br /><br />
+          Don't have account?<a href="signup.html" style="font-family: 'Play',sans-serif;"> &nbsp;Sign Up </a>
+        </form>
+      </div>
+
+  </section>
