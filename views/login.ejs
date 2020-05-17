@@ -10,8 +10,10 @@
       <div class="col-lg-6 firsthalf">
         <form action="/login" method="post">
           <h2 >Log In</h2>
-          <input type="text" name="username" placeholder="Username" /><br /><br />
-          <input type="password" name="password" placeholder="Password" /><br /><br />
+          <div class="label">UserName</div>
+          <input class="form-control" type="text" name="username" placeholder="Username" />
+          <div class="label">Password</div>
+          <input class="form-control" type="password" name="password" placeholder="Password" />
           <button class="btn btn-dark btn-lg" type="submit" name="button">Log In</button>
           <!-- <a href="cong.html"><input type="button" value="Log In" /></a><br /><br /> -->
           <div id="container"><br />
@@ -21,7 +23,7 @@
             font-family:Tahoma, Geneva,sans-serif;">Forget
               password</a>
           </div><br /><br /><br /><br /><br /><br />
-          Don't have account?<a href="signup.html" style="font-family: 'Play',sans-serif;"> &nbsp;Sign Up </a>
+          Don't have account?<a href="/signup" style="font-family: 'Play',sans-serif;"> &nbsp;Sign Up </a>
         </form>
       </div>
 
