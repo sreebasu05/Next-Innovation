@@ -10,12 +10,18 @@
       <div class="col-lg-6 firsthalf">
         <form action="/signup" method="post">
           <h2 >Log In</h2>
-          <input type="text" name="username" placeholder="Username" /><br /><br />
-          <input type="text" name="fullname" placeholder="FullName" /><br /><br />
-          <input type="password" name="password" placeholder="Password" /><br /><br />
-          <input type="password" name="cpassword" placeholder="Confirm Password" /><br /><br />
-          <input type="text" name="email" placeholder="Email Address" /><br /><br />
+          <div class="label">UserName</div>
+          <input class="form-control" type="text" name="username" placeholder="john.william05" />
+          <div class="label">Full Name</div>
+          <input class="form-control" type="text" name="fullname" placeholder="John William" />
+          <div class="label">Password</div>
+          <input class="form-control" type="password" name="password" placeholder="Password" />
+          <div class="label">Confirm Password</div>
+          <input class="form-control" type="password" name="cpassword" placeholder="Confirm Password" />
+          <div class="label">Email Id</div>
+          <input class="form-control" type="text" name="email" placeholder="Email Address" />
           <button class="btn btn-dark btn-lg" type="submit" name="button">Sign Up</button>
+
           <div id="container"><br />
             <a href="re.html" style="margin-right:0px; font-size:13px;
             font-family:Tahoma,Geneva, sans-serif; padding-top:20px;">Reset password?</a>
