@@ -1,8 +1,13 @@
 h3,h2 {
   color: #11999e;
 }
+h4{
+  color: #11999e;
+}
 
-
+a{
+  color: white;
+}
 p {
   font-size: 1.5rem;
   color: #8f8f8f;
@@ -33,6 +38,7 @@ body {
   padding-bottom: 5rem;
   padding-right: 6rem;
 }
+
 
 .navbar {
   padding: 0 0 0rem;
@@ -103,6 +109,7 @@ body {
   color: #fff;
   text-align: center;
   padding: 3% 15% 3%;
+  
 }
 @media (max-width: 1028px) {
   #title{
