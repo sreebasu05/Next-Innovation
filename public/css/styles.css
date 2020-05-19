@@ -1,9 +1,14 @@
-h3 {
-  color: #30e3ca;
+h3,h2 {
+  color: #11999e;
 }
 
+
 p {
+  font-size: 1.5rem;
   color: #8f8f8f;
+}
+body {
+  background-color: #e4f9f5
 }
 
 #navigationbar {
@@ -23,9 +28,10 @@ p {
 }
 
 .heading {
-
+  color: #fff;
   font-size: 4.5rem;
   padding-bottom: 5rem;
+  padding-right: 6rem;
 }
 
 .navbar {
@@ -69,14 +75,35 @@ p {
   color: #fff;
   padding-top: 10px;
 }
-
+.carousel-inner{
+  color: #fff;
+}
 .carousel-item {
+
   padding: 3% 15%;
 }
-#sellform {
+#sellform, #list {
   background-color: #e4f9f5
 }
-
+.btn {
+  margin-top: 10px ;
+  margin-right: 30px;
+}
+.pricing-column {
+  margin-bottom: 20px;
+}
+.know {
+  color: #000;
+}
+.know:hover {
+  color: #fff;
+}
+#footer{
+  background-color: #11999e;
+  color: #fff;
+  text-align: center;
+  padding: 3% 15% 3%;
+}
 @media (max-width: 1028px) {
   #title{
     text-align: center;

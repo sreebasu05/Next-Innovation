@@ -4,4 +4,5 @@ Please install these modules or check the dependencies:
 2. body-parser
 3. ejs
 4. lodash
-5. Mongodb
+5. mongoose
+6. serve-favicon
