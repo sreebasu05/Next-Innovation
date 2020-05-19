@@ -1,16 +1,16 @@
 <%- include("partials/header") -%>
+<!-- sign up page -->
   <section id="title">
     <div class="row container-fluid">
       <div class="col-lg-6 " >
         <h1 class="heading">Sign Up </h1>
-        <p>
+        <h6>
           login or register from here.
-        </p>
+        </h6>
       </div>
       <div class="col-lg-6 firsthalf">
         <form action="/signup" method="post">
-          <h2 >Log In</h2>
-          <div class="label">UserName</div>
+        <div class="label">UserName</div>
           <input class="form-control" type="text" name="username" placeholder="john.william05" />
           <div class="label">Full Name</div>
           <input class="form-control" type="text" name="fullname" placeholder="John William" />
@@ -21,16 +21,10 @@
           <div class="label">Email Id</div>
           <input class="form-control" type="text" name="email" placeholder="Email Address" />
           <button class="btn btn-dark btn-lg" type="submit" name="button">Sign Up</button>
-
-          <div id="container"><br />
-            <a href="re.html" style="margin-right:0px; font-size:13px;
-            font-family:Tahoma,Geneva, sans-serif; padding-top:20px;">Reset password?</a>
-            <a href="for.html" style=" margin-left:30px; font-size:13px;
-            font-family:Tahoma, Geneva,sans-serif;">Forget
-              password</a>
-          </div><br /><br /><br /><br /><br /><br />
-          Already have a account?<a href="login.html" style="font-family: 'Play',sans-serif;"> &nbsp;Log In </a>
+        <br /><br /><br /><br /><br /><br />
+          Already have a account? <a href="/login" style="font-family: 'Play',sans-serif;">Log In </a>
         </form>
       </div>
 
   </section>
+  <%- include("partials/footer") -%>
