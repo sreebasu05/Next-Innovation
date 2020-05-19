@@ -80,7 +80,7 @@ const usersSchema = new mongoose.Schema({
 
 const User = mongoose.model("User", usersSchema);
 
-//signup and login pages
+//signup page
 app.get("/signup", function(req, res) {
   res.render("signup");
 });
@@ -111,7 +111,7 @@ app.post("/signup", function(req, res) {
     }
   });
 });
-
+//login page
 app.get("/login", function(req, res) {
   res.render("login");
 });
@@ -172,6 +172,7 @@ app.get("/books", function(req, res) {
     }
   });
 });
+//the buy page after signing up: shows all the books available
 app.get("/books/:user", function(req, res) {
   Book.find({}, function(err, foundBooks) {
 
@@ -194,7 +195,7 @@ app.get("/books/:user", function(req, res) {
     }
   });
 });
-//the other buy page: show all the products except books
+//the other products buy page: show all the products except books
 app.get("/others", function(req, res) {
   Item.find({}, function(err, foundItems) {
 
@@ -217,6 +218,7 @@ app.get("/others", function(req, res) {
     }
   });
 });
+//the other products buy page after signing up: show all the products except books
 app.get("/others/:user", function(req, res) {
   Item.find({}, function(err, foundItems) {
 
@@ -392,7 +394,7 @@ app.post("/additem/:user", function(req, res) {
 
 });
 
-
+//this redirects to the page of full details of a specific book
 app.get("/bookd/:bookid", function(req, res) {
   const bookid = req.params.bookid;
   Book.findOne({
@@ -419,6 +421,7 @@ app.get("/bookd/:bookid", function(req, res) {
   });
 });
 
+//this redirects to the page of full details of a specific book after signing up
 app.get("/bookdB/:user/:bookid", function(req, res) {
   const user = req.params.user;
   const bookid = req.params.bookid;
@@ -446,6 +449,7 @@ app.get("/bookdB/:user/:bookid", function(req, res) {
     }
   });
 });
+//this redirects to the page of full details of a specific product
 app.get("/otherd/:itemid", function(req, res) {
   const itemid = req.params.itemid;
   Item.findOne({
@@ -470,6 +474,7 @@ app.get("/otherd/:itemid", function(req, res) {
 
   });
 });
+//this redirects to the page of full details of a specific product after signing up
 app.get("/otherdB/:user/:itemid", function(req, res) {
   const user = req.params.user;
   const itemid = req.params.itemid;
@@ -501,15 +506,19 @@ app.get("/otherdB/:user/:itemid", function(req, res) {
 app.get("/info", function(req, res) {
   res.render("info");
 });
+
+//book info page after signing up
 app.get("/info/:user", function(req, res) {
   res.render("infoB", {
     user: req.params.user
   });
 });
+
 //contact us
 app.get("/contact", function(req, res) {
   res.render("contact");
 });
+
 app.post("/contact", function(req, res) {
   const mail = new Mail({
     name: req.body.name,
@@ -520,14 +529,15 @@ app.post("/contact", function(req, res) {
   });
   mail.save();
   res.redirect("/");
-
-
 });
+
+//contact us page after signing up
 app.get("/contact/:user", function(req, res) {
   res.render("contactB", {
     user: req.params.user
   });
 });
+
 app.post("/contact/:user", function(req, res) {
   const user = req.params.user;
   const mail = new Mail({
@@ -539,8 +549,6 @@ app.post("/contact/:user", function(req, res) {
   });
   mail.save();
   res.redirect("/contact/" + user);
-
-
 });
 
 //server
