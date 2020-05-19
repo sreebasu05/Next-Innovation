@@ -1,11 +1,12 @@
 <%- include("partials/headerB") -%>
+<!-- Main Home Page of the User-->
 
 <section id="title">
   <div class="row container-fluid">
     <div class="col-lg-7">
       <h1 class="heading" >Welcome <%=name%>, to Next Innovation </h1>
-      <button type="button" class="btn btn-light btn-lg button"><a href="/items" style="color:#000"><i class="fas fa-sign-in-alt"></i> Sign Up</a></button>
-      <button type="button" class="btn btn-outline-dark btn-lg button"><a href="/add" style="color:#fff"><i class="fas fa-sign-in-alt"></i> Log In</a></button>
+      <button type="button" class="btn btn-light btn-lg button"><a href="/items" style="color:#000"><i class="fas fa-sign-in-alt"></i> Buy Books</a></button>
+      <button type="button" class="btn btn-outline-dark btn-lg button"><a href="/add/<%=user%>" style="color:#fff"><i class="fas fa-sign-in-alt"></i> Sell Books</a></button>
 
     </div>
   </div>
@@ -17,19 +18,19 @@
     <div class="feature-box col-lg-4">
       <i class="icon fas fa-book fa-4x"></i>
       <h3><strong>Buy & Sell Books.</strong></h3>
-      <p>Buy books you want and sell which you don't in-campus.</p>
+      <p>Buy books or anything you want and sell which you don't in-campus.</p>
+
+    </div>
+    <div class="feature-box col-lg-4">
+      <i class="icon fas fa-user-clock fa-4x"></i>
+      <h3><strong>Save money & time.</strong></h3>
+      <p>No need to wait for your delivery.</p>
 
     </div>
     <div class="feature-box col-lg-4">
       <i class=" icon fas fa-info-circle fa-4x"></i>
       <h3><strong>Get book info.</strong></h3>
       <p>Get to know which books you need for ur course.</p>
-
-    </div>
-    <div class="feature-box col-lg-4">
-      <i class="icon fas fa-user-clock fa-4x"></i>
-      <h3><strong>Save money & time.</strong></h3>
-      <p>.</p>
 
     </div>
   </div>

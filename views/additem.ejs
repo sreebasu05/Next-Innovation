@@ -1,14 +1,16 @@
-<%- include("partials/header") -%>
+<%- include("partials/headerB") -%>
+<!-- form of books -->
 <section id="title">
   <div class="row container-fluid">
 
 
     <div class="col-lg-6">
-      <h1 class="heading" > Fill in the Details </h1>
+      <h1 class="heading"> Fill in the Details </h1>
+      <h6>Want to sell something else? <a href="/addother/<%=user%>">Click here!</a>.</h6>
     </div>
     <div class="col-lg-6">
 
-      <form action="/add" method="post">
+      <form action="/additem/<%=user%>" method="post">
         <div class="form-group ">
           <div class="label">Book Name</div>
           <input class="form-control" type="text" name="bookname" placeholder="Da Vinci Code">
@@ -26,12 +28,17 @@
           <input class="form-control" type="text" name="email" placeholder="Email Id">
           <input class="form-control" type="text" name="hostel" placeholder="Hostel name">
           <input class="form-control" type="text" name="room" placeholder="Room no.">
-          <textarea class="form-control" name="time" >Please contact me between (add preferable time) using (add preferable mode). </textarea>
-          <button class="btn btn-dark" type="submit" name="button">Add</button>
+          <textarea class="form-control" name="time">Please contact me between (add preferable time) using (add preferable mode). </textarea>
+          <button class="btn btn-dark" type="submit" name="button" onclick="add()">Add</button>
         </div>
 
       </form>
     </div>
+    <script>
+      function add() {
+        alert("Item Added! Thank You!");
+      }
+    </script>
 
 </section>
 <%- include("partials/footer") -%>
