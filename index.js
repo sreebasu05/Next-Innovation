@@ -5,7 +5,7 @@ const _ = require("lodash");
 const mongoose = require('mongoose');
 
 const app = express();
-var favicon = require('serve-favicon');
+// var favicon = require('serve-favicon');
 
 app.use('/favicon.ico', express.static('/favicon.ico'));
 app.set('view engine', 'ejs');
@@ -141,6 +141,7 @@ app.post("/signup", function(req, res) {
     user.save();
     res.redirect("/index/" + u);
   } else {
+    alert("your password don't match");
     console.log("error");
     res.redirect("/signup");
   }
