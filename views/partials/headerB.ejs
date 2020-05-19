@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- header after logged in -->
 <html lang="en" dir="ltr">
 
 <head>
@@ -26,7 +27,8 @@
   <div class="container-fluid">
 
     <nav class="navbar navbar-expand-lg">
-      <a class="navbar-brand" href="">Next Innovation</a>
+      <a class="navbar-brand" href="">
+      Next Innovation</a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,20 +39,20 @@
           <a class="nav-link" href="/index/<%=user%>">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/add/<%=user%>">Sell</a>
+          <a class="nav-link" href="/additem/<%=user%>">Sell</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/items">Buy</a>
+          <a class="nav-link" href="/books/<%=user%>">Buy</a>
         </li>
 
         <li class="nav-item">
           <a class="nav-link" href="/dashboard/<%=user%>">Dashboard</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/info">About Books</a>
+          <a class="nav-link" href="/info/<%=user%>">About Books</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact Us</a>
+          <a class="nav-link" href="/contact/<%=user%>">Contact Us</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/">Sign Out</a>

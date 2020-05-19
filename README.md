@@ -5,3 +5,4 @@ Please install these modules or check the dependencies:
 3. ejs
 4. lodash
 5. mongoose
+6. serve-favicon
