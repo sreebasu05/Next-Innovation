@@ -1,4 +1,4 @@
-<%- include("partials/header") -%>
+<%- include("partials/headerB") -%>
 
 <!-- contact us -->
 <section id="title">
@@ -9,7 +9,7 @@
       <h6>Connect with us by sending your reviews, problems and suggestions.</h6>
     </div>
     <div class="col-lg-6">
-      <form action="/contact" method="post">
+      <form action="/contact/<%=user%>" method="post">
         <div class="label">Name</div>
         <input class="form-control" type="text" name="name" placeholder="John">
 
@@ -32,11 +32,11 @@
         <button class="btn btn-dark" type="submit" name="button" onclick="save()">Send</button>
       </form>
     </div>
-
     <script>
       function save() {
         alert("Mail Received! Thank you!")
       }
     </script>
 </section>
+
 <%- include("partials/footer") -%>
